@@ -1,5 +1,7 @@
 # Learning Java 2 Days before the AP Test
 
+### [Java Quick Reference](https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf)
+
 ## Unit 1 - Primitive Types
 
 Java has 8 primitive datatypes
@@ -41,25 +43,136 @@ Creating and storing objects is known as instantiation
 
 ```java
 // Using Objects
+// Using Objects
 class Main{
     public static void main(String[] args){
-        Cat cat1 = new Cat("James");
-        System.out.println(cat1.feed());
+        // Working with Objects
+        Cat cat1 = new Cat("James",3);
+        System.out.println(cat1.feed()); //Calling a non void method
+        System.out.println(cat1.getAge());
+        cat1.birthday(); //Calling a void method
+        System.out.println(cat1.getAge()); //Age is incremented
+
+        // Working with String Objects
+        // Concatenation, literals, more
+        String statement1 = "Hi";
+        String statement2 = "There";
+        System.out.println(statement1+" "+statement2); //Concatination
     }
 }
 ```
 ```java
 class Cat{
     String name;
-    public Cat(String name){
-        this.name = name;
+    private int age;
+    public Cat(String name,int age){
+        this.name = name; 
+        this.age = age;
     }
 
     public String feed(){
         return "You fed "+this.name;
     }
+
+    public void birthday(){
+        this.age++;
+    }
+    public int getAge(){
+        return this.age;
+    }
 }
 ```
 Output:
-`You Fed James`
+```
+You fed James
+3
+4
+Hi There
+```
 
+## Unit 3 - Booleans and if statements
+
+Lets not waste any time
+
+```java
+int a = 10;
+int b = 20;
+// All boolean expressions
+a <= b;
+a == b;
+!(a == b);
+
+if (a != b){
+    return "This ain't it chief"
+}
+```
+
+Unit 4 - Iteration
+
+I know while and for loops..
+
+Devloping Algorithms using Strings
+
+The three string methods available on the test are:
+```java
+String.substring();
+String.equals();
+String.length();
+```
+
+In terms of "algorithms" may be asked to reimplement the String.contains() methods or something similar using the above methods and for loops.
+
+Nested iteration, i gots that
+
+Informal Code Analysis,, what's what??
+
+^ Ohh, it's just knowing how many times a line of code is going to be run. ie.
+```java
+for (int i=0;i<10;i++){
+    System.out.println(i); //This line will run 10 times
+}
+```
+
+## Unit 5 - Writing Classes
+
+Mostly completed with Unit 2
+
+The `toString()` method
+```java
+public String toString(){
+    return "Cat "+this.name+" is "+this.age+" years old";
+}
+```
+
+The `equals()` method
+```java
+public boolean equals(Object o){
+    if (this == o){
+        return true; //Check if the object is the same
+    }
+    else if (!(o instanceOf User)){
+        return false //Check if the object is of the same class
+    }
+    else{
+        Cat otherCat = (Cat) o;
+        return this.name.equals(otherCat.name) // In this case, objects are equal if the cats have the same name
+    }
+}
+```
+
+The `compareTo()` method
+```java
+public int compareTo(Cat otherCat){
+    if (this.getAge() < otherCat.getAge()){
+        return -1
+    }
+    else if (this.getAge() > otherCat.getAge()){
+        return -1
+    }
+    else{
+        return 0;
+    }
+}
+```
+
+## Unit 6 - Array
