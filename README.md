@@ -206,7 +206,7 @@ int[] newNums = new int[20];
 double[] favFloats = {2.71,3.14,6.28};
 ```
 
-## Unit 8 ArrayList
+## Unit 7 ArrayList
 
 but,, wat if we don't no how big our array is gon be?
 
@@ -225,3 +225,5 @@ roster.add(new Student("Sora"));
 roster.set(0, new Student("Sora"));
 roster.remove(1);
 ```
+
+## Unit 
