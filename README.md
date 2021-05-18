@@ -245,7 +245,7 @@ for (int row=0; row<3;row++){
 i pray
 
 
-# Unit 9 - Inheritance
+## Unit 9 - Inheritance
 
 ```java
 public class Tiger extends Cat{
@@ -263,3 +263,7 @@ public class Tiger extends Cat{
 
 
 ^ I think this is right but outta time..
+
+## Unit 10 - Recursion
+
+Just running the same function in a function. i shall survive this.
