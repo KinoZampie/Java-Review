@@ -226,4 +226,40 @@ roster.set(0, new Student("Sora"));
 roster.remove(1);
 ```
 
-## Unit 
+## Unit 8 2D arrays
+10 minutes till test!! forogt about this!!
+
+```java
+// Defining a 2d array
+int[][] board = {{1,2,3},{4,5,6},{7,8,9}}
+
+// Traversing a 2d array
+for (int row=0; row<3;row++){
+    for (int col=0; col<3;col++){
+        System.out.print(board[row][col]);
+    }
+    System.out.println("");
+}
+```
+
+i pray
+
+
+# Unit 9 - Inheritance
+
+```java
+public class Tiger extends Cat{
+    private boolean big;
+    public Tiger(name,age){
+        super(name,age)
+        this.big = true;
+    }
+// Overriding
+    public getName(){
+        return name+" aka big boi";
+    }
+}
+```
+
+
+^ I think this is right but outta time..
