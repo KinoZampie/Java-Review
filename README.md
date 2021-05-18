@@ -107,7 +107,7 @@ if (a != b){
 }
 ```
 
-Unit 4 - Iteration
+## Unit 4 - Iteration
 
 I know while and for loops..
 
@@ -175,4 +175,53 @@ public int compareTo(Cat otherCat){
 }
 ```
 
-## Unit 6 - Array
+## Unit 6 - Arrays
+
+Cowabunga here's how you write arrays
+
+```java
+//No need to define length this way
+Stirng[] colors = {"red","orange","yellow","green","blue","indigo","violet"};
+
+// Otherwise define length if going to populate later
+String[] colors = new String[5]
+
+colors[2] // Select array item
+
+// The for each loop
+for (String color : colors){
+    System.out.println(color);
+}
+
+colors.length //Length of an array
+```
+
+Sanity check, arrays other than strings
+
+```java
+int[] favNums = {0,2,12,42,420};
+
+int[] newNums = new int[20];
+
+double[] favFloats = {2.71,3.14,6.28};
+```
+
+## Unit 8 ArrayList
+
+but,, wat if we don't no how big our array is gon be?
+
+The bois at oracle already thought of that, allow me to introduce to you the ArrayList
+
+```java
+import Java.util.ArrayList;
+
+ArrayList<Type> name = new ArrayList<Type>();
+
+// The add set and remove methods
+
+ArrayList<Student> roster = new ArrayList<Student>();
+roster.add(new Student("Sora"));
+roster.add(new Student("Sora"));
+roster.set(0, new Student("Sora"));
+roster.remove(1);
+```
